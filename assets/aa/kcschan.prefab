@@ -1,0 +1,89 @@
+{
+  "object":{
+    "name":"kcschan",
+    "position":[ "0", "-9", "-12" ],
+    "rotation":[ "0", "0", "1", "0" ],
+    "scale":[ "1", "1", "1" ],
+    "children":{
+      "object":{
+        "name":"Armature",
+        "position":[ "0.000000", "0.000000", "0.000000" ],
+        "rotation":[ "1.000000", "0.000000", "0.000000", "0.000000" ],
+        "scale":[ "1.000000", "1.000000", "1.000000" ],
+        "components":{
+          "Rig":{
+            "armature":"aa/kcschan.blend/Armature.armature"
+          }
+        }
+      },
+      "object":{
+        "name":"outer",
+        "rig":"Armature",
+        "position":[ "0.000000", "0.000000", "0.000000" ],
+        "rotation":[ "1.000000", "0.000000", "0.000000", "0.000000" ],
+        "scale":[ "1.000000", "1.000000", "1.000000" ],
+        "components":{
+          "MeshRenderer":{
+            "mesh":"aa/kcschan.blend/outer.mesh",
+            "modifiers":{},
+            "materials":[
+              "outer.material"
+            ]
+          }
+        }
+      },
+      "object":{
+        "name":"clothes",
+        "rig":"Armature",
+        "position":[ "0.000000", "0.000000", "0.000000" ],
+        "rotation":[ "1.000000", "0.000000", "0.000000", "0.000000" ],
+        "scale":[ "1.000000", "1.000000", "1.000000" ],
+        "components":{
+          "MeshRenderer":{
+            "mesh":"aa/kcschan.blend/clothes.mesh",
+            "modifiers":{},
+            "materials":[
+              "clothes.material"
+            ]
+          }
+        }
+      },
+      "object":{
+        "name":"hair",
+        "parent_bone":"head",
+        "position":[ "0.000000", "0.000000", "0.000000" ],
+        "rotation":[ "1.000000", "0.000000", "0.000000", "0.000000" ],
+        "scale":[ "1.000000", "1.000000", "1.000000" ],
+        "components":{
+          "MeshRenderer":{
+            "mesh":"aa/kcschan.blend/hair.mesh",
+            "modifiers":{},
+            "materials":[
+              "hair.material"
+            ]
+          }
+        }
+      },
+      "object":{
+        "name":"body",
+        "rig":"Armature",
+        "position":[ "0.000000", "0.000000", "0.000000" ],
+        "rotation":[ "1.000000", "0.000000", "0.000000", "0.000000" ],
+        "scale":[ "1.000000", "1.000000", "1.000000" ],
+        "components":{
+          "MeshRenderer":{
+            "mesh":"aa/kcschan.blend/body.mesh",
+            "modifiers":{
+              "skin":{
+                
+              }
+            },
+            "materials":[
+              "body.material"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "parameters":{
+    "move":{
+      "type":"bool",
+      "value":"false"
+    }
+  },
+  "states":{
+    "default":{
+      "type":"single",
+      "clip":"aa/kcschan.blend/Armature_idle_60.animclip",
+      "speed":"1"
+    }
+  },
+  "transitions":{}
+}

@@ -1,0 +1,11 @@
+{
+  "shader":".internal/unlit_color.shader",
+  "Color":{
+    "name":"color",
+    "value":[ "1", "1", "1", "1" ]
+  },
+  "Float":{
+    "name":"scale",
+    "value":"200"
+  }
+}

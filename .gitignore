@@ -1,0 +1,10 @@
+assets/.ce/
+assets/.exported/
+
+build/
+config/
+user/
+temp/
+system/build/
+system/src/loaders/
+system/game_scripts.cmake
