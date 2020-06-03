@@ -2,7 +2,7 @@
   "shader":"singletex.shader",
   "Texture":{
     "name":"diffuse",
-    "value":"cornell.png"
+    "value":"reftex.png"
   },
   "Float":{
     "name":"metallic",
@@ -10,6 +10,6 @@
   },
   "Float":{
     "name":"roughness",
-    "value":"0.5"
+    "value":"1"
   }
 }

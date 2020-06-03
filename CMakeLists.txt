@@ -7,7 +7,9 @@
 cmake_minimum_required(VERSION 3.3)
 project (chokoeditor_project)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../share")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
+    ${CE_EDITOR_ROOT}/share
+)
 
 find_package(ChokoEngine REQUIRED)
 

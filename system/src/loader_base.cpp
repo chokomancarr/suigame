@@ -11,7 +11,11 @@ ScriptLoaderImpl _ScriptLoaderImpl::getld(const std::string& s) {
 	auto& res = _lds[s];
 	if (!res) {
 		if (0) {}
-			else if (s == "texx.hpp"){
+			else if (s == "camera.hpp"){
+				res = std::make_shared<_ScrLdImpl_Cam>();
+			}			else if (s == "player.hpp"){
+				res = std::make_shared<_ScrLdImpl_Ppl>();
+			}			else if (s == "texx.hpp"){
 				res = std::make_shared<_ScrLdImpl_Texx>();
 			}
 		}

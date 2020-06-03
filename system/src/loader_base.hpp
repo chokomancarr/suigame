@@ -8,6 +8,8 @@
 
 CE_BEGIN_PL_NAMESPACE
 
+CE_PL_OBJ(ScrLdImpl_Cam)
+CE_PL_OBJ(ScrLdImpl_Ppl)
 CE_PL_OBJ(ScrLdImpl_Texx)
 
 CE_PL_OBJ(ScriptLoaderImpl)
@@ -51,9 +53,12 @@ public:
     _IMPL_GETSET(Vec4)
     _IMPL_GETSET(Quat)
     _IMPL_GETSET(Asset)
+    _IMPL_GETSET(SceneObject)
 #undef _IMPL_GETSET
 };
 
 CE_END_PL_NAMESPACE
 
+#include "loaders/load_Cam.hpp"
+#include "loaders/load_Ppl.hpp"
 #include "loaders/load_Texx.hpp"

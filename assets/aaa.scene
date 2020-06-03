@@ -2,11 +2,8 @@
   "object":{
     "name.String":"__scene__",
     "children.ObjGroup":{
-      "prefab":{
-        "target.Asset":{
-          "Prefab":".exported/monkey.blend/monkey.blend.prefab"
-        },
-        "name.String":"monkey.blend",
+      "object":{
+        "name.String":"cam axis",
         "position.Vec3":[
           "0.000000",
           "0.000000",
@@ -25,7 +22,94 @@
         ],
         "children.ObjGroup":{
           "object":{
-            "name.String":"New Object",
+            "name.String":"Camera",
+            "position.Vec3":[
+              "0.000000",
+              "5.000000",
+              "7.000000"
+            ],
+            "rotation.Quat":[
+              "0.000000",
+              "-0.000000",
+              "0.996195",
+              "-0.087156"
+            ],
+            "scale.Vec3":[
+              "1.000000",
+              "1.000000",
+              "1.000000"
+            ],
+            "components.ObjGroup":{
+              "Camera":{
+                "orthographic.Int":"0",
+                "fov.Float":"60.000000",
+                "orthoSize.Float":"10.000000",
+                "nearClip.Float":"0.100000",
+                "farClip.Float":"100.000000",
+                "clearType.Int":"3",
+                "clearDepth.Float":"1.000000",
+                "clearColor.Vec4":[
+                  "0.000000",
+                  "0.000000",
+                  "0.000000",
+                  "0.000000"
+                ]
+              },
+              "Script":{
+                "script.String":"camera.hpp",
+                "variables.ItemGroup":{
+                  "ppl.SceneObject":{
+                    "player":"0"
+                  },
+                  "rotSp.Float":"180.000000",
+                  "followSp.Float":"8.000000"
+                }
+              }
+            }
+          }
+        }
+      },
+      "object":{
+        "name.String":"player",
+        "position.Vec3":[
+          "0.000000",
+          "0.000000",
+          "0.000000"
+        ],
+        "rotation.Quat":[
+          "-0.000000",
+          "-0.000000",
+          "1.000000",
+          "-0.000000"
+        ],
+        "scale.Vec3":[
+          "1.000000",
+          "1.000000",
+          "1.000000"
+        ],
+        "components.ObjGroup":{
+          "Script":{
+            "script.String":"player.hpp",
+            "variables.ItemGroup":{
+              "moveSp.Float":"20.000000",
+              "camAxis.SceneObject":{
+                "cam axis":"0"
+              },
+              "idleClip.Asset":{
+                "AnimClip":".exported/kcschan.blend/Armature_idle.animclip"
+              },
+              "runClip.Asset":{
+                "AnimClip":".exported/kcschan.blend/Armature_run.animclip"
+              }
+            }
+          }
+        },
+        "children.ObjGroup":{
+          "prefab":{
+            "target.Asset":{
+              "Prefab":".exported/kcschan.blend/kcschan.blend.prefab"
+            },
+            "name.String":"kcschan.blend",
             "position.Vec3":[
               "0.000000",
               "0.000000",
@@ -41,56 +125,19 @@
               "1.000000",
               "1.000000",
               "1.000000"
-            ],
-            "parent.SceneObject":{
-              "monkey.blend":"0",
-              "Suzanne":"0"
-            }
-          }
-        }
-      },
-      "object":{
-        "name.String":"New Object",
-        "position.Vec3":[
-          "0.000000",
-          "0.000000",
-          "5.000000"
-        ],
-        "rotation.Quat":[
-          "-0.000000",
-          "-0.000000",
-          "1.000000",
-          "-0.000000"
-        ],
-        "scale.Vec3":[
-          "1.000000",
-          "1.000000",
-          "1.000000"
-        ],
-        "components.ObjGroup":{
-          "Camera":{
-            "orthographic.Int":"0",
-            "fov.Float":"40.000000",
-            "orthoSize.Float":"1.000000",
-            "nearClip.Float":"0.100000",
-            "farClip.Float":"100.000000",
-            "clearType.Int":"3",
-            "clearDepth.Float":"1.000000",
-            "clearColor.Vec4":[
-              "0.000000",
-              "0.000000",
-              "0.000000",
-              "0.000000"
             ]
           }
         }
       },
-      "object":{
-        "name.String":"asdf",
+      "prefab":{
+        "target.Asset":{
+          "Prefab":".exported/plane.blend/plane.blend.prefab"
+        },
+        "name.String":"plane.blend",
         "position.Vec3":[
-          "-1.000000",
-          "1.000000",
-          "1.000000"
+          "0.000000",
+          "0.000000",
+          "0.000000"
         ],
         "rotation.Quat":[
           "1.000000",
@@ -99,42 +146,10 @@
           "0.000000"
         ],
         "scale.Vec3":[
+          "100.000000",
           "1.000000",
-          "1.000000",
-          "1.000000"
-        ],
-        "components.ObjGroup":{
-          "Light":{
-            "type.Int":"0",
-            "falloff.Int":"2",
-            "strength.Float":"2.000000",
-            "distance.Float":"10.000000",
-            "radius.Float":"0.100000",
-            "angle.Float":"30.000000",
-            "color.Vec4":[
-              "0.000000",
-              "0.400000",
-              "1.000000",
-              "1.000000"
-            ],
-            "shadow.Int":"0",
-            "shadowDistance.Float":"50.000000",
-            "shadowStrength.Float":"1.000000",
-            "shadowResolution.Int":"512",
-            "shadowBias.Float":"0.010000",
-            "shadowOnly.Int":"0",
-            "softShadows.Int":"0",
-            "shadowSamples.Int":"8"
-          },
-          "Script":{
-            "script.String":"texx.hpp",
-            "variables.ItemGroup":{
-              "tx.Asset":{
-                "Texture":"aa.jpg"
-              }
-            }
-          }
-        }
+          "100.000000"
+        ]
       }
     }
   },
