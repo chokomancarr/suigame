@@ -1,0 +1,9 @@
+{
+  "signature":"ChokoEngine Asset MetaData",
+  "version":"20",
+
+  "node_info":{
+    "0": [ "30", "10" ],
+    "1": [ "200", "80" ]
+  }
+}

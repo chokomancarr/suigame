@@ -100,7 +100,8 @@
               },
               "runClip.Asset":{
                 "AnimClip":".exported/kcschan.blend/Armature_run.animclip"
-              }
+              },
+              "rotSp.Float":"20.000000"
             }
           }
         },

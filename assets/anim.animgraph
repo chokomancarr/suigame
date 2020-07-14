@@ -1,0 +1,46 @@
+{
+  "params":{
+    "move":{
+      "bool":"0"
+    }
+  },
+  "default_state":"0",
+  "states": {
+    "idle": {
+      "type": "single",
+      "clip": ".exported/kcschan.blend/Armature_idle.animclip",
+      "speed": "1.0"
+    },
+    "run": {
+      "type": "single",
+      "clip": ".exported/kcschan.blend/Armature_run.animclip",
+      "speed": "1.0"
+    }
+  },
+  "transitions": {
+    "0": {
+      "1": {
+        "length": "0.2",
+        "offset": "0",
+        "on_exit": "0",
+        "conditions": [
+          {
+            "0": [ "Equals", "1" ]
+          }
+        ]
+      }
+    },
+    "1": {
+      "0": {
+        "length": "0.2",
+        "offset": "0",
+        "on_exit": "0",
+        "conditions": [
+          {
+            "0": [ "Equals", "0" ]
+          }
+        ]
+      }
+    }
+  }
+}
