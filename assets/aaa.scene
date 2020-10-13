@@ -2,8 +2,77 @@
   "object":{
     "name.String":"__scene__",
     "children.ObjGroup":{
+      "prefab":{
+        "target.Asset":{
+          "Prefab":".exported/kcschan.blend/kcschan.blend.prefab"
+        },
+        "name.String":"kcschan.blend",
+        "position.Vec3":[
+          "0.000000",
+          "0.000000",
+          "0.000000"
+        ],
+        "rotation.Quat":[
+          "1.000000",
+          "0.000000",
+          "0.000000",
+          "0.000000"
+        ],
+        "scale.Vec3":[
+          "1.000000",
+          "1.000000",
+          "1.000000"
+        ],
+        "mods.ItemGroup*":[
+          {
+            "target":{},
+            "modcomps":{
+              "Animator":{
+                "single.Int":"0",
+                "repeat.Int":"1",
+                "clip.Asset":{
+                  "Unknown":"none"
+                },
+                "graph.Asset":{
+                  "AnimGraph":"anim.animgraph"
+                }
+              }
+            },
+            "addcomps":{
+              "Script":{
+                "script.String":"player.hpp",
+                "variables.ItemGroup":{
+                  "moveSp.Float":"20.000000",
+                  "jumpingMoveSp.Float":"30.000000",
+                  "camAxis.SceneObject":{
+                    "pivot":"0"
+                  },
+                  "rotSp.Float":"10.000000",
+                  "jumpLen.Float":"1.000000",
+                  "jumpHt.Float":"15.000000"
+                },
+                "__comp__index.Int":"1"
+              }
+            }
+          },
+          {
+            "target":{
+              "body":"0"
+            },
+            "modcomps":{
+              "MeshRenderer":{
+                "materials.Asset*":[
+                  {
+                    "Material":"body.material"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
       "object":{
-        "name.String":"cam axis",
+        "name.String":"pivot",
         "position.Vec3":[
           "0.000000",
           "0.000000",
@@ -22,17 +91,17 @@
         ],
         "children.ObjGroup":{
           "object":{
-            "name.String":"Camera",
+            "name.String":"camera",
             "position.Vec3":[
               "0.000000",
-              "5.000000",
-              "7.000000"
+              "5.086391",
+              "-9.000317"
             ],
             "rotation.Quat":[
+              "0.999743",
+              "0.022687",
               "0.000000",
-              "-0.000000",
-              "0.996195",
-              "-0.087156"
+              "0.000000"
             ],
             "scale.Vec3":[
               "1.000000",
@@ -59,74 +128,13 @@
                 "script.String":"camera.hpp",
                 "variables.ItemGroup":{
                   "ppl.SceneObject":{
-                    "player":"0"
+                    "kcschan.blend":"0"
                   },
-                  "rotSp.Float":"180.000000",
-                  "followSp.Float":"8.000000"
+                  "rotSp.Float":"60.000000",
+                  "followSp.Float":"10.000000"
                 }
               }
             }
-          }
-        }
-      },
-      "object":{
-        "name.String":"player",
-        "position.Vec3":[
-          "0.000000",
-          "0.000000",
-          "0.000000"
-        ],
-        "rotation.Quat":[
-          "-0.000000",
-          "-0.000000",
-          "1.000000",
-          "-0.000000"
-        ],
-        "scale.Vec3":[
-          "1.000000",
-          "1.000000",
-          "1.000000"
-        ],
-        "components.ObjGroup":{
-          "Script":{
-            "script.String":"player.hpp",
-            "variables.ItemGroup":{
-              "moveSp.Float":"20.000000",
-              "camAxis.SceneObject":{
-                "cam axis":"0"
-              },
-              "idleClip.Asset":{
-                "AnimClip":".exported/kcschan.blend/Armature_idle.animclip"
-              },
-              "runClip.Asset":{
-                "AnimClip":".exported/kcschan.blend/Armature_run.animclip"
-              },
-              "rotSp.Float":"20.000000"
-            }
-          }
-        },
-        "children.ObjGroup":{
-          "prefab":{
-            "target.Asset":{
-              "Prefab":".exported/kcschan.blend/kcschan.blend.prefab"
-            },
-            "name.String":"kcschan.blend",
-            "position.Vec3":[
-              "0.000000",
-              "0.000000",
-              "0.000000"
-            ],
-            "rotation.Quat":[
-              "1.000000",
-              "0.000000",
-              "0.000000",
-              "0.000000"
-            ],
-            "scale.Vec3":[
-              "1.000000",
-              "1.000000",
-              "1.000000"
-            ]
           }
         }
       },
@@ -147,9 +155,9 @@
           "0.000000"
         ],
         "scale.Vec3":[
-          "100.000000",
+          "1000.000000",
           "1.000000",
-          "100.000000"
+          "1000.000000"
         ]
       }
     }

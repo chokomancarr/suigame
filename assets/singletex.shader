@@ -51,7 +51,7 @@ layout (location=1) out vec4 outNormal; //xyz
 layout (location=2) out vec4 outSpec; //metal rough occlu flags2
 layout (location=3) out vec4 outEmi; //????
 
-layout (location=4) out ivec4 _out_attrs; //????
+layout (location=4) out ivec4 _outObjectID;
 
 void main() {
     outColor = texture(diffuse, v2f.uv);
@@ -62,6 +62,6 @@ void main() {
     outSpec.a = 0;
     outEmi = vec4(0, 0, 0, 0);
     
-    _out_attrs.r = _object_id;
+    _outObjectID.x = _object_id;
 }"
 }

@@ -2,42 +2,127 @@
   "params":{
     "move":{
       "bool":"0"
+    },
+    "jump":{
+      "bool":"0"
+    },
+    "movef":{
+      "float":"0.000000"
     }
   },
   "default_state":"0",
-  "states": {
-    "idle": {
-      "type": "single",
-      "clip": ".exported/kcschan.blend/Armature_idle.animclip",
-      "speed": "1.0"
+  "states":{
+    "idle":{
+      "type":"Single",
+      "clip":".exported/kcschan.blend/Armature_idle.animclip",
+      "clips1D":{},
+      "var1D":"0",
+      "speed":"1.000000",
+      "repeat":"1"
     },
-    "run": {
-      "type": "single",
-      "clip": ".exported/kcschan.blend/Armature_run.animclip",
-      "speed": "1.0"
+    "run":{
+      "type":"Single",
+      "clip":".exported/kcschan.blend/Armature_run.animclip",
+      "clips1D":{},
+      "var1D":"0",
+      "speed":"1.500000",
+      "repeat":"1"
+    },
+    "jump":{
+      "type":"Single",
+      "clip":".exported/kcschan.blend/Armature_jump.animclip",
+      "clips1D":{},
+      "var1D":"0",
+      "speed":"1.000000",
+      "repeat":"0"
+    },
+    "land":{
+      "type":"Linear1D",
+      "clip":"none",
+      "clips1D":{
+        "0.000000":".exported/kcschan.blend/Armature_land.animclip",
+        "1.000000":".exported/kcschan.blend/Armature_landr.animclip"
+      },
+      "var1D":"2",
+      "speed":"1.000000",
+      "repeat":"0"
     }
   },
-  "transitions": {
-    "0": {
-      "1": {
-        "length": "0.2",
-        "offset": "0",
-        "on_exit": "0",
-        "conditions": [
+  "transitions":{
+    "0":{
+      "1":{
+        "length":"0.100000",
+        "offset":"0.000000",
+        "on_exit":"0",
+        "exit_length":"0.000000",
+        "conditions":[
           {
-            "0": [ "Equals", "1" ]
+            "0":[
+              "Equals",
+              "1"
+            ]
           }
         ]
       }
     },
-    "1": {
-      "0": {
-        "length": "0.2",
-        "offset": "0",
-        "on_exit": "0",
-        "conditions": [
+    "1":{
+      "0":{
+        "length":"0.100000",
+        "offset":"0.000000",
+        "on_exit":"0",
+        "exit_length":"0.000000",
+        "conditions":[
           {
-            "0": [ "Equals", "0" ]
+            "0":[
+              "Equals",
+              "0"
+            ]
+          }
+        ]
+      }
+    },
+    "2":{
+      "3":{
+        "length":"0.200000",
+        "offset":"0.000000",
+        "on_exit":"0",
+        "exit_length":"0.000000",
+        "conditions":[
+          {
+            "1":[
+              "Equals",
+              "0"
+            ]
+          }
+        ]
+      }
+    },
+    "3":{
+      "0":{
+        "length":"0.500000",
+        "offset":"0.000000",
+        "on_exit":"1",
+        "exit_length":"1.000000",
+        "conditions":[
+          {
+            "0":[
+              "Equals",
+              "0"
+            ]
+          }
+        ]
+      },
+      "1":{
+        "length":"0.500000",
+        "offset":"0.000000",
+        "on_exit":"1",
+        "exit_length":"1.000000",
+        "conditions":[
+          {
+            "0":[
+              "Equals",
+              "1"
+            ]
           }
         ]
       }

@@ -22,6 +22,7 @@ endforeach(OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES)
 
 if (MSVC)
 	SET(CMAKE_CXX_FLAGS "/EHsc /W3")
+	string(REPLACE "/O2" "/Od" CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO})
 else()
 	SET(CMAKE_CXX_FLAGS "-g -Wall -Wextra -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-ignored-attributes")
 	add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-std=c++1y> $<$<COMPILE_LANGUAGE:C>:-std=c99>)
@@ -46,6 +47,9 @@ set(LIBS
 
 add_executable(chokoeditor_project "")
 target_include_directories(chokoeditor_project PUBLIC ${INCLUDE_DIRS})
+if (MSVC)
+    set_target_properties(chokoeditor_project PROPERTIES LINK_FLAGS "/INCREMENTAL:NO")
+endif()
 include(system/system_scripts.cmake)
 include(system/game_scripts.cmake)
 include(system/src/loaders.cmake)

@@ -1,3 +1,6 @@
+.vs/
+.vscode/
+
 assets/.ce/
 assets/.exported/
 
@@ -6,5 +9,6 @@ config/
 user/
 temp/
 system/build/
-system/src/loaders/
+system/src/
+!system/main.cpp
 system/game_scripts.cmake

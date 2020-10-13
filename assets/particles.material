@@ -1,0 +1,11 @@
+{
+  "shader":".internal/particles_additive.shader",
+  "Texture":{
+    "name":"tex",
+    "value":"smoke.jpg"
+  },
+  "Color":{
+    "name":"col",
+    "value":["1","1","1","1"]
+  }
+}
